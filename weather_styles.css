@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+.weather-container {
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 3px solid #0b0b0b;
+    border-radius: 8px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #2d96c0;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+}
+
+.loading-indicator {
+    display: none;
+    margin-top: 50px;
+    background-image: url('opi3.gif');
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-info {
+    display: none;
+    color: red;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+header {
+    background-color: #41d0ed;
+    color: #32c6d7;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #1777ae;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    text-align: center;
+}
+
+footer {
+    background-color: #264f9b;
+    color: #8c0ddb;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    /* Original logo color */
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media  (min-aspect-ratio: 16/9) {
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media  (max-aspect-ratio: 16/9) {
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather_styles.css">
+</head>
+
+<body>
+
+    <header>
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="video.mp4" type ="video/mp4">
+            </video>
+        <div class="container">
+            <h1>LIVE WEATHER</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#weather_app">Weather Info </a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Live Weather</h2>
+            <p> Live weather refers to the current atmospheric conditions like temperature, humidity, wind speed,
+                precipitation, and atmospheric pressure. This real-time data, collected from weather stations,
+                satellites, and radar systems, is crucial for activities like agriculture, transportation, and disaster
+                preparedness. Meteorologists analyze this information to offer accurate forecasts and updates.
+                Accessible through websites, apps, and dedicated channels, live weather reports aid in decision-making,
+                allowing people to plan safely for outdoor activities and mitigate risks associated with adverse
+                weather. </p>
+        </div>
+    </section>
+    <section id="weather_app">
+        <div class="container">
+            <h1>Live Weather </h1>
+            <div class="weather-container">
+                <div class="input-container">
+                    <input type="text" id="cityInput" placeholder="Enter City">
+                    <button onclick="getWeather()">Get Weather</button>
+                </div>
+                <div id="weatherInfo"></div>
+                <div id="loadingIndicator" class="loading-indicator"></div>
+                <div id="errorInfo" class="error-info"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <script src="weather_javas.js"></script>
+
+    <footer>
+        <div class="container">
+            <p>Follow me on social media:</p>
+            <div class="footer">
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/PranticsPov?mibextid=ZbWKwL"><img src="OIP.jpeg"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/prantic_dev_nath?igsh=NG5pNWxxOW8xcXNw"><img src="opi1.png"
+                                alt="Instragram"></a></li>
+                    <li><a href="http://www.youtube.com/@PranticsPOV1"><img src="opi2.png" alt="Youtube"></a></li>
+                </ul>
+            </div>
+            <p> &copy; 2024 LIVE WEATHER. All rights reserved.</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
