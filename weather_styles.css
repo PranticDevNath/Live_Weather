@@ -163,4 +163,23 @@ footer {
     }
 }
 
+.city-list {
+    position: absolute;
+    width: calc(10% + 2px);
+    max-height: 100px;
+    overflow-y: auto;
+    background-color: #00ffff;
+    border: 1px solid #ffffff;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 
+.city-list-item {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.city-list-item:hover {
+    background-color: #729cd7;
+}
