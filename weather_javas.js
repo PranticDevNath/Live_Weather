@@ -36,3 +36,44 @@ function getWeather() {
             loadingIndicator.style.display = 'none';
         });
 }
+
+
+
+const cityInput = document.getElementById('cityInput');
+const cityList = document.getElementById('cityList');
+
+cityInput.addEventListener('input', function () {
+    const inputText = this.value.trim().toLowerCase();
+    if (inputText.length === 0) {
+        cityList.innerHTML = '';
+        return;
+    }
+
+    const apiUrl = `https://api.openweathermap.org/data/2.5/find?q=${inputText}&type=like&mode=json&cnt=5&appid=138b36873382bc891b1d3565ffa666cd`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const cities = data.list;
+            const citySuggestions = cities.map(city => city.name);
+            displayCitySuggestions(citySuggestions);
+        })
+        .catch(error => {
+            console.error('Error fetching city suggestions:', error);
+            cityList.innerHTML = '';
+        });
+});
+
+function displayCitySuggestions(suggestions) {
+    cityList.innerHTML = '';
+    suggestions.forEach(suggestion => {
+        const listItem = document.createElement('div');
+        listItem.classList.add('city-list-item');
+        listItem.textContent = suggestion;
+        listItem.addEventListener('click', function () {
+            cityInput.value = this.textContent;
+            cityList.innerHTML = '';
+        });
+        cityList.appendChild(listItem);
+    });
+}
