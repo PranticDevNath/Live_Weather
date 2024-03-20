@@ -167,7 +167,7 @@ footer {
 
 .city-list {
     position: absolute;
-    width: calc(10% + 2px);
+    width: calc(20% + 2px);
     max-height: 100px;
     overflow-y: auto;
     background-color: #00ffff;
