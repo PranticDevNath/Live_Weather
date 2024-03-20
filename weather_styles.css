@@ -141,7 +141,6 @@ footer {
     transform: scale(1.1);
 }
 
-
 .back-video {
     position: absolute;
     right: 0;
@@ -163,9 +162,12 @@ footer {
     }
 }
 
+
+
+
 .city-list {
     position: absolute;
-    width: calc(20% + 2px);
+    width: calc(15% + 2px);
     max-height: 100px;
     overflow-y: auto;
     background-color: #00ffff;
