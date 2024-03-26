@@ -19,14 +19,22 @@ function getWeather() {
             return response.json();
         })
         .then(data => {
-            const { name, sys, main, weather } = data;
+            const { name, sys, main, weather, wind, clouds, rain } = data;
             const temperature = main.temp;
             const description = weather[0].description;
+            const humidity = main.humidity;
+            const windSpeed = wind.speed;
+            const precipitation = rain ? (rain['1h'] ? rain['1h'] : 0) : 0; // Precipitation in the last 1 hour, if available
+            const pressure = main.pressure;
 
             weatherInfo.innerHTML = `
                 <h2>${name}, ${sys.country}</h2>
                 <p>Temperature: ${temperature}°C</p>
                 <p>Description: ${description}</p>
+                <p>Humidity: ${humidity}%</p>
+                <p>Wind Speed: ${windSpeed} m/s</p>
+                <p>Precipitation: ${precipitation} mm</p>
+                <p>Pressure: ${pressure} hPa</p>
             `;
             loadingIndicator.style.display = 'none';
         })
