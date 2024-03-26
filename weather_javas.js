@@ -85,3 +85,4 @@ function displayCitySuggestions(suggestions) {
         cityList.appendChild(listItem);
     });
 }
+
